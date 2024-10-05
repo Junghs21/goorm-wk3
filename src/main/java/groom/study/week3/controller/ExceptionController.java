@@ -25,12 +25,6 @@ public class ExceptionController {
         throw new RuntimeException("getRuntimeException 메소드 호출");
     }
 
-    @ExceptionHandler(value = RuntimeException.class)
-    public ResponseEntity<Map<String, String>> handleException(RuntimeException e,
-                                                               HttpServletRequest request) {
-        //구현
-    }
-
     // 예제 10.19
     @GetMapping("/custom")
     public void getCustomException() throws CustomException {
